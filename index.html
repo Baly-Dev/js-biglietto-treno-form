@@ -13,16 +13,95 @@
     
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    
     <!-- Mine -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <main class="d-flex flex-column align-items-center justify-content-center">
+        
+        <section id="first_section" class="mb-5">
+            <div class="container border border-dark rounded p-5">
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <h2 class="text-dark text-center fw-bold">Calcola il prezzo del tuo biglietto</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div>
+                            <div class="row mb-4">
+                                <div class="col-4">
+                                    <label class="text-dark fw-bold mb-2 fs-5" for="full_name">Nome e Cognome</label>
+                                    <input class="form-control" type="text" name="full_name" id="full_name" placeholder="es.: Kevin Baly">
+                                </div>
+        
+                                <div class="col-4">
+                                    <label class="text-dark fw-bold mb-2 fs-5" for="km">Km da percorrere</label>
+                                    <input class="form-control" type="text" name="km" id="km" placeholder="es.: 10">
+                                </div>
+        
+                                <div class="col-4">
+                                    <label class="text-dark fw-bold mb-2 fs-5" for="age_range">Fascia di età</label>
+                                    <select class="form-select" type="text" name="age_range" id="age_range" placeholder="Fascia di età">
+                                        <option value="minorenne">Minorenne</option>
+                                        <option value="maggiorenne">Maggiorenne</option>
+                                        <option value="over_65">Sopra i 65</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 d-flex">
+                                    <button id="execute" class="btn btn-dark ms-auto">Genera</button>
+                                </div>
+                                <div class="col-6 d-flex">
+                                    <button id="reset" class="btn btn-danger me-auto">Annulla</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="second_section" class="generated_ticket">
+            <div class="container border border-dark rounded p-5">
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <h2 class="text-dark text-center fw-bold">Il tuo biglietto</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <p class="fw-bold fs-6">Nome passeggero</p>
+                        <p id="ticketFullName" class=""></p>
+                    </div>
+
+                    <div class="col-2">
+                        <p class="fw-bold fs-6">Offerta</p>
+                        <p id="ticketOffer" class=""></p>
+                    </div>
+                    <div class="col-2">
+                        <p class="fw-bold fs-6">Carrozza</p>
+                        <p id="ticketCabin" class=""></p>
+                    </div>
+                    <div class="col-2">
+                        <p class="fw-bold fs-6">Codice CP</p>
+                        <p id="ticketCode" class=""></p>
+                    </div>
+                    <div class="col-2">
+                        <p class="fw-bold fs-6">Costo biglietto</p>
+                        <p id="ticketPrice" class=""></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    
     <!-- Mine -->
-    <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
